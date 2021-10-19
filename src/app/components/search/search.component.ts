@@ -14,11 +14,10 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+      console.log("I am loading")
   }
 
   public getSearchValue(value: string){
-    // this.txtSearchValue = (document.getElementById("txtArtistSearch") as HTMLInputElement).value;
-    console.log(value)
     this.searchTermEvent.emit(value);
   }
 

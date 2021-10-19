@@ -9,8 +9,8 @@ export class Album {
     @JsonProperty('cover_medium', String, true)
     private cover: string = "";
 
-    @JsonProperty('release_date', Date, true)
-    private releaseDate: Date = new Date();
+    @JsonProperty('release_date', String, true)
+    private releaseDate: string = "";
 
     public getTitle(): string{
         return this.title;
@@ -20,7 +20,7 @@ export class Album {
         return this.cover;
     }
 
-    public getReleaseDate(): Date{
+    public getReleaseDate(): string{
         return this.releaseDate;
     }
 }

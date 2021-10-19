@@ -1,1 +1,9 @@
-<p>search-results works! See: {{searchTerm}}</p>
+<div class="center" (click)="getArtist()">
+
+    <img [src]="artists.getPictureMedium()"/>
+
+    <h3>{{artists.getName()}}</h3>
+    <p>{{artists.getNumberOfFans()}} fans</p>
+    <p>{{artists.getNumberOfAlbums()}} albums</p>
+
+</div>
