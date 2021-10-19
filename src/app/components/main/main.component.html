@@ -1,11 +1,11 @@
-<div>
-    <!--Header Div-->
-    <div>
+<div class="center">
+    <div class="center">
         <h1>Deezer Search</h1>
     </div>
-    <app-search (searchTermEvent)="getSearch($event)" [hidden]="false"></app-search>
-    <app-search-results [searchTerm]="artistSearch"></app-search-results>
-    <!--Footer Tag-->
+    <app-search (searchTermEvent)="getSearch($event)" [hidden]="hideSearch"></app-search>
+    <app-search-results (artistEvent)="getArtist($event)" [searchTerm]="artistSearch" [hidden]="hideSearchResults"></app-search-results>
+    <app-artist [artistData]="artist" [hidden]="hideArtist"></app-artist>
+    
     <div>
         <h6>Developed by Randolph Aguanomwan</h6>
     </div>

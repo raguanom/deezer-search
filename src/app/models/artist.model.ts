@@ -5,30 +5,40 @@ import { Track } from './track.model';
 @JsonObject('artist')
 export class Artist {
 
+    @JsonProperty('id', Number, true)
+    private id: number = 0;
+
     @JsonProperty('name', String, true)
-    protected name: string = "";
+    private name: string = "";
 
     @JsonProperty('picture_big', String, true)
-    protected picture: string = "";
+    private picture: string = "";
+
+    @JsonProperty('picture_medium', String, true)
+    private pictureMedium: string = "";
 
     @JsonProperty('nb_album', Number, true)
-    protected numberOfAlbums: number = 0;
+    private numberOfAlbums: number = 0;
 
     @JsonProperty('nb_fan', Number, true)
-    protected numberOfFans: number = 0;
+    private numberOfFans: number = 0;
 
-    @JsonProperty('top', Track, true)
-    private topTracks: Track[] = [];
+    // @JsonProperty('top', Track, true)
+    // private topTracks: Track[] = [];
 
-    @JsonProperty('picture_big', Album, true)
-    private albums: Album[] = [];
+    // @JsonProperty('picture_big', Album, true)
+    // private albums: Album[] = [];
 
-    public getTopTracks(): Track[]{
-        return this.topTracks;
-    }
+    // public getTopTracks(): Track[]{
+    //     return this.topTracks;
+    // }
 
-    public getAlbums(): Album[]{
-        return this.albums;
+    // public getAlbums(): Album[]{
+    //     return this.albums;
+    // }
+
+    public getId(): number {
+        return this.id;
     }
 
     public getName(): string{
@@ -37,6 +47,10 @@ export class Artist {
 
     public getPicture(): string{
         return this.picture;
+    }
+    
+    public getPictureMedium(): string{
+        return this.pictureMedium;
     }
 
     public getNumberOfAlbums(): number{

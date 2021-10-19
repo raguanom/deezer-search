@@ -1,1 +1,49 @@
-<p>artist works!</p>
+<div>
+  <div>
+    <mat-grid-list cols="2">
+      <mat-grid-tile>
+        <div>
+          <img [src]="artistData.getPicture()" />
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div>
+          <h1>{{artistData.getName()}}</h1>
+          <h3>{{artistData.getNumberOfFans()}}</h3>
+        </div>
+        <div>
+          <h2>Top Tracks</h2>
+          <div>
+            <ol>
+              <ng-container *ngFor="let track of tracks; let i=index">
+                <li>{{track.getTitle()}} <br /> {{track.getDurationInMinutes()}}</li>
+              </ng-container>
+            </ol>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <div>
+      <h2>Albums</h2>
+      <div>
+        <ol>
+          <ng-container *ngFor="let album of albums">
+            <ul>
+              <div>
+                <div>
+                  <img [src]="album.getCover()" />
+                  <div>
+                    <h5>{{album.getTitle()}}</h5>
+                  </div>
+                  <div>
+                    <p>{{album.getReleaseDate()}}</p>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </ng-container>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
