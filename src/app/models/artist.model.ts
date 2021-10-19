@@ -1,4 +1,6 @@
 import {JsonObject, JsonProperty} from 'json2typescript';
+import { Album } from './album.model';
+import { Track } from './track.model';
 
 @JsonObject('artist')
 export class Artist {
@@ -14,6 +16,20 @@ export class Artist {
 
     @JsonProperty('nb_fan', Number, true)
     protected numberOfFans: number = 0;
+
+    @JsonProperty('top', Track, true)
+    private topTracks: Track[] = [];
+
+    @JsonProperty('picture_big', Album, true)
+    private albums: Album[] = [];
+
+    public getTopTracks(): Track[]{
+        return this.topTracks;
+    }
+
+    public getAlbums(): Album[]{
+        return this.albums;
+    }
 
     public getName(): string{
         return this.name;

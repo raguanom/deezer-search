@@ -4,7 +4,7 @@
         <h1>Deezer Search</h1>
     </div>
     <app-search (searchTermEvent)="getSearch($event)" [hidden]="false"></app-search>
-    <app-search-results></app-search-results>
+    <app-search-results [searchTerm]="artistSearch"></app-search-results>
     <!--Footer Tag-->
     <div>
         <h6>Developed by Randolph Aguanomwan</h6>
