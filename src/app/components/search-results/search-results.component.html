@@ -1,9 +1,24 @@
-<div class="center" (click)="getArtist()">
+<div class="center" (click)="getArtist()" [hidden]="isSearching || isEmptyResult">
+  <div class="artist-card">
+    <div class="artist-picture">
+      <img [src]="artists.getPictureMedium()" />
+    </div>
+    <div class="artist-name">
+      <h3>{{artists.getName()}}</h3>
+    </div>
+    <div class="fans">
+      <p>{{artists.getNumberOfFans()}} fans</p>
+    </div>
+    <div class="albums">
+      <p>{{artists.getNumberOfAlbums()}} albums</p>
+    </div>
+  </div>
+</div>
 
-    <img [src]="artists.getPictureMedium()"/>
+<div [hidden]="!isSearching">
+    Getting search results...
+</div>
 
-    <h3>{{artists.getName()}}</h3>
-    <p>{{artists.getNumberOfFans()}} fans</p>
-    <p>{{artists.getNumberOfAlbums()}} albums</p>
-
+<div [hidden]="!isEmptyResult">
+    No results for "{{searchTerm}}". Please try again.
 </div>

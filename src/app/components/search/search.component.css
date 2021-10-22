@@ -1,0 +1,30 @@
+.flex-box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    width: wrap;
+    padding-left: 50%;
+    padding-right: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+input{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    width: wrap;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}

@@ -8,7 +8,6 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { MainComponent } from './components/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule,
-    MatGridListModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
