@@ -1,0 +1,39 @@
+.artist-card {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 240px 50px 25px 25px;
+  grid-template-areas: "picture""name""fan-count""album-count";
+}
+
+.artist-picture {
+  grid-area: picture;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.artist-name {
+  grid-area: name;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.fans {
+  grid-area: fan-count;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.albums {
+  grid-area: album-count;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

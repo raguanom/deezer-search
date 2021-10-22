@@ -1,0 +1,62 @@
+<div class="artist-page-grid pad">
+  <div>
+    <div (click)="hideThisPage()" style="display: flex; align-items: center;">
+      close[x]
+    </div>
+  </div>
+  <div class="top-row-grid">
+    <div class="artist-picture">
+      <img [src]="artistData.getPicture()" />
+    </div>
+    <div class="top-five">
+      <div class="heading-wrapper">
+        <div class="artist-name-wrapper">
+          <h1>{{artistData.getName()}}</h1>
+        </div>
+        <div class="fan-count-wrapper">
+          <h3>{{artistData.getNumberOfFans()}}</h3>
+        </div>
+        <div class="top-tracks-wrapper">
+          <h2>Top Tracks</h2>
+        </div>
+        <div class="top-list-wrapper">
+          <ol>
+            <ng-container *ngFor="let track of tracks; let i=index">
+              <li>{{track.getTitle()}} <br /> {{track.getDurationInMinutes()}}</li>
+            </ng-container>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>
+      Albums:
+    </h3>
+  </div>
+  <div>
+    <div class="pad">
+      <div class="wrapper">
+        <div *ngFor="let album of albums">
+          <img [src]="album.getCover()" />
+          <div>
+            <h5>{{album.getTitle()}}</h5>
+          </div>
+          <div>
+            <p>{{album.getReleaseDate()}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-box">
+    <a class="button" (click)="getPrevious()">
+      <span> Prev </span>
+    </a>
+  </div>
+  <div class="flex-box">
+    <a class="button" (click)="getNext()">
+      <span> Next </span>
+    </a>
+  </div>
+</div>

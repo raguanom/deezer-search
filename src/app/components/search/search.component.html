@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="flex-box">
+    <input type="text" placeholder="Artist name eg. 'Eminem'" #artistSearch>
+    <div class="flex-box">
+        <a class="button" (click)="getSearchValue(artistSearch.value)">
+          <span class="sidebar-normal"> Search </span>
+        </a>
+      </div>
+  </div>
+  <div [hidden]="!isError">
+    <p style="color: red;">{{error}}</p>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://api.deezer.com/artist",
+    "secure": false
+  }
+}

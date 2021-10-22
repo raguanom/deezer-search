@@ -1,0 +1,88 @@
+.top-row-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+}
+
+.artist-picture {
+  grid-area: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-five {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-wrapper {
+  display: grid;
+  grid-template-rows: 50px 40px 40px auto;
+  grid-template-areas: "artist-name""fan-count""top-tracks""top-list";
+}
+
+.artist-name-wrapper {
+  grid-area: artist-name;
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  padding-bottom: 25px;
+  font-weight: bold;
+}
+
+.fan-count-wrapper {
+  grid-area: fan-count;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.top-tracks-wrapper {
+  grid-area: top-tracks;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.top-list-wrapper {
+  grid-area: top-list;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.pad {
+  padding: 5px 5px 5px 5px;
+}
+
+.artist-page-grid {
+  display: grid;
+  grid-template-rows: 50px auto 50px auto 50px;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    width: wrap;
+    padding-left: 50%;
+    padding-right: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.flex-box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
