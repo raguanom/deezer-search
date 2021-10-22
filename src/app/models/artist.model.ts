@@ -1,4 +1,4 @@
-import {JsonObject, JsonProperty} from 'json2typescript';
+import { JsonObject, JsonProperty } from 'json2typescript';
 import { Album } from './album.model';
 import { Track } from './track.model';
 
@@ -11,7 +11,7 @@ export class Artist {
     @JsonProperty('name', String, true)
     private name: string = "";
 
-    @JsonProperty('picture_big', String, true)
+    @JsonProperty('picture_xl', String, true)
     private picture: string = "";
 
     @JsonProperty('picture_medium', String, true)
@@ -23,41 +23,27 @@ export class Artist {
     @JsonProperty('nb_fan', Number, true)
     private numberOfFans: number = 0;
 
-    // @JsonProperty('top', Track, true)
-    // private topTracks: Track[] = [];
-
-    // @JsonProperty('picture_big', Album, true)
-    // private albums: Album[] = [];
-
-    // public getTopTracks(): Track[]{
-    //     return this.topTracks;
-    // }
-
-    // public getAlbums(): Album[]{
-    //     return this.albums;
-    // }
-
     public getId(): number {
         return this.id;
     }
 
-    public getName(): string{
+    public getName(): string {
         return this.name;
     }
 
-    public getPicture(): string{
+    public getPicture(): string {
         return this.picture;
     }
-    
-    public getPictureMedium(): string{
+
+    public getPictureMedium(): string {
         return this.pictureMedium;
     }
 
-    public getNumberOfAlbums(): number{
+    public getNumberOfAlbums(): number {
         return this.numberOfAlbums;
     }
 
-    public getNumberOfFans(): number{
+    public getNumberOfFans(): number {
         return this.numberOfFans;
     }
 }

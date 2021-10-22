@@ -1,0 +1,78 @@
+.grid {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 60px auto 80px;
+  grid-template-areas: "page-top""page-main""page-bottom";
+}
+
+.main {
+  grid-area: page-main;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "search-bar""search-results""artist-profile";
+}
+
+.artist-profile {
+  grid-area: artist-profile;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.search {
+  grid-area: search-bar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.results {
+  grid-area: search-results;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: black;
+  color: white;
+  grid-area: page-top;
+  width: 100%;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100%;
+  background: black;
+  color: white;
+  grid-area: page-bottom;
+  width: 100%;
+}
+
+.signature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#page-bottom {
+  position: relative;
+}
+
+#dev-signature {
+  position: absolute;
+  bottom: 0;
+}
